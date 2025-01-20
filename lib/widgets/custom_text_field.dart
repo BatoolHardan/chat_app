@@ -7,10 +7,22 @@ class CustomTextfeild extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
       decoration: InputDecoration(
         hintText: hintText,
-        hintStyle: const TextStyle(color: Colors.white),
+        hintStyle: TextStyle(
+          color: Colors.white,
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.white,
+          ),
+        ),
+        border: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.white,
+          ),
+        ),
       ),
     );
   }

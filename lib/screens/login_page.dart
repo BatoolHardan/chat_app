@@ -13,18 +13,26 @@ class LoginPage extends StatelessWidget {
       backgroundColor: kPrimaryColor,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8),
-        child: Column(children: [
-          Spacer(
-            flex: 2,
+        child: ListView(children: [
+          SizedBox(
+            height: 75,
           ),
-          Image.asset('assets/images/scholar.png'),
-          Text(
-            'Scholer Chat',
-            style: TextStyle(
-                fontSize: 32, color: Colors.white, fontFamily: 'Pacifico'),
+          Image.asset(
+            'assets/images/scholar.png',
+            height: 100,
           ),
-          Spacer(
-            flex: 2,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Scholer Chat',
+                style: TextStyle(
+                    fontSize: 32, color: Colors.white, fontFamily: 'Pacifico'),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: 75,
           ),
           Row(
             children: [
@@ -46,7 +54,7 @@ class LoginPage extends StatelessWidget {
           ),
           CustomTextfeild(hintText: 'Password'),
           SizedBox(
-            height: 10,
+            height: 20,
           ),
           CustomButton(
             text: 'LOGIN',
@@ -72,9 +80,6 @@ class LoginPage extends StatelessWidget {
               ),
             ],
           ),
-          Spacer(
-            flex: 3,
-          )
         ]),
       ),
     );
