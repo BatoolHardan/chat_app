@@ -1,3 +1,4 @@
+import 'package:chat_01/constants.dart';
 import 'package:chat_01/screens/register_page.dart';
 import 'package:chat_01/widgets/custom_buttom.dart';
 import 'package:chat_01/widgets/custom_text_field.dart';
@@ -9,7 +10,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff2B475E),
+      backgroundColor: kPrimaryColor,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8),
         child: Column(children: [
@@ -62,7 +63,7 @@ class LoginPage extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.pushNamed(context, 'RegiterPage');
+                  Navigator.pushNamed(context, RegiterPage.id);
                 },
                 child: Text(
                   '  Register',
