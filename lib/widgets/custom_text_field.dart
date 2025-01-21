@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 class CustomTextfeild extends StatelessWidget {
   final String hintText;
 
-  const CustomTextfeild({super.key, required this.hintText});
-
+  CustomTextfeild({super.key, this.onChanged, required this.hintText});
+  Function(String)? onChanged;
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
+    return TextField(
+      onChanged: onChanged,
       decoration: InputDecoration(
         hintText: hintText,
         hintStyle: TextStyle(
